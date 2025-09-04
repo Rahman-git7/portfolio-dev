@@ -270,6 +270,9 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         .project-card::before {
@@ -303,6 +306,11 @@
             color: var(--text-dim);
             margin-bottom: 20px;
             line-height: 1.8;
+            flex-grow: 1;
+        }
+
+        .project-footer {
+            margin-top: auto;
         }
 
         .project-tech {
@@ -310,7 +318,6 @@
             flex-wrap: wrap;
             gap: 10px;
             margin-bottom: 20px;
-            margin-top: auto;
         }
 
         .tech-tag {
@@ -547,16 +554,18 @@
                     <p class="project-description">
                         Infrastructure DevOps sécurisée pour 50+ centres de santé. Déploiement automatisé avec Azure AKS, monitoring complet avec stack Grafana/Prometheus, et pipeline CI/CD GitLab.
                     </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Azure</span>
-                        <span class="tech-tag">Terraform</span>
-                        <span class="tech-tag">AKS</span>
-                        <span class="tech-tag">Grafana</span>
-                        <span class="tech-tag">Ansible</span>
+                    <div class="project-footer">
+                        <div class="project-tech">
+                            <span class="tech-tag">Azure</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">AKS</span>
+                            <span class="tech-tag">Grafana</span>
+                            <span class="tech-tag">Ansible</span>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1PlXLjoWP856V7C8GVAYSbwkYGu0XzBrk/view" target="_blank" class="project-link">
+                            Voir la documentation →
+                        </a>
                     </div>
-                    <a href="https://drive.google.com/file/d/1PlXLjoWP856V7C8GVAYSbwkYGu0XzBrk/view" target="_blank" class="project-link">
-                        Voir la documentation →
-                    </a>
                 </div>
 
                 <div class="project-card">
@@ -564,16 +573,18 @@
                     <p class="project-description">
                         API REST sécurisée en Go pour la gestion de certificats. Authentification JWT, base de données PocketBase, et déploiement automatisé sur AWS ECS via GitLab CI/CD.
                     </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Go</span>
-                        <span class="tech-tag">AWS ECS</span>
-                        <span class="tech-tag">GitLab CI/CD</span>
-                        <span class="tech-tag">JWT</span>
-                        <span class="tech-tag">Docker</span>
+                    <div class="project-footer">
+                        <div class="project-tech">
+                            <span class="tech-tag">Go</span>
+                            <span class="tech-tag">AWS ECS</span>
+                            <span class="tech-tag">GitLab CI/CD</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                        <a href="https://gitlab.com/Rahman-S/api-certificats" target="_blank" class="project-link">
+                            Voir sur GitLab →
+                        </a>
                     </div>
-                    <a href="https://gitlab.com/Rahman-S/api-certificats" target="_blank" class="project-link">
-                        Voir sur GitLab →
-                    </a>
                 </div>
 
                 <div class="project-card">
@@ -581,14 +592,16 @@
                     <p class="project-description">
                         Système automatisé de veille technologique DevOps. Collecte et analyse des dernières tendances, outils et pratiques du monde DevOps avec notifications automatiques.
                     </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">GitHub Actions</span>
-                        <span class="tech-tag">Automation</span>
+                    <div class="project-footer">
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                            <span class="tech-tag">Automation</span>
+                        </div>
+                        <a href="https://github.com/Rahman-git7/devops-veille" target="_blank" class="project-link">
+                            Voir sur GitHub →
+                        </a>
                     </div>
-                    <a href="https://github.com/Rahman-git7/devops-veille" target="_blank" class="project-link">
-                        Voir sur GitHub →
-                    </a>
                 </div>
 
                 <div class="project-card">
@@ -596,15 +609,53 @@
                     <p class="project-description">
                         Gestion d'infrastructure AWS multi-environnements (Dev/Staging/Prod) avec Pulumi. Monitoring avancé avec CloudWatch et AlertManager, déploiement via ArgoCD.
                     </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">AWS</span>
-                        <span class="tech-tag">Pulumi</span>
-                        <span class="tech-tag">ArgoCD</span>
-                        <span class="tech-tag">CloudWatch</span>
+                    <div class="project-footer">
+                        <div class="project-tech">
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Pulumi</span>
+                            <span class="tech-tag">ArgoCD</span>
+                            <span class="tech-tag">CloudWatch</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            Projet en cours →
+                        </a>
                     </div>
-                    <a href="#" class="project-link">
-                        Projet en cours →
-                    </a>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">🔐 Security Pipeline</h3>
+                    <p class="project-description">
+                        Intégration de la sécurité dans les pipelines CI/CD avec Trivy pour le scan des images Docker et IaC. Rapports automatisés et blocage des déploiements en cas de vulnérabilités critiques.
+                    </p>
+                    <div class="project-footer">
+                        <div class="project-tech">
+                            <span class="tech-tag">Trivy</span>
+                            <span class="tech-tag">GitLab CI/CD</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Terraform</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            En développement →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">🛡️ Infrastructure Hardening</h3>
+                    <p class="project-description">
+                        Sécurisation des déploiements Kubernetes avec NetworkPolicies, RBAC avancé, et monitoring de sécurité. Implémentation des bonnes pratiques de sécurité cloud native.
+                    </p>
+                    <div class="project-footer">
+                        <div class="project-tech">
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">RBAC</span>
+                            <span class="tech-tag">NetworkPolicies</span>
+                            <span class="tech-tag">Falco</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            Objectif 2025 →
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
